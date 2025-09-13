@@ -1,0 +1,10 @@
+//
+// Created by eduh on 9/13/25.
+//
+
+#ifndef INC_6502_CPU_EMULATOR_CONFIG_H
+#define INC_6502_CPU_EMULATOR_CONFIG_H
+
+#define USE_NMOS 1
+
+#endif //INC_6502_CPU_EMULATOR_CONFIG_H
