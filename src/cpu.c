@@ -13,13 +13,18 @@
 void cpu_reset(CPU_type_t* cpu) {
     cpu->PC = 0xFFFC; // load PC with the reset
     cpu->SP = 0xFF;
-//    cpu->SR = 0x00;
     cpu->AC = 0x00;
     cpu->X = 0x00;
     cpu->Y = 0x00;
 
+    // reset the status register
     cpu->SR &= ~(N_MASK);
-
+    cpu->SR &= ~(V_MASK);
+    cpu->SR &= ~(B_MASK);
+    cpu->SR &= ~(D_MASK);
+    cpu->SR &= ~(I_MASK);
+    cpu->SR &= ~(Z_MASK);
+    cpu->SR &= ~(C_MASK);
 }
 
 /**
@@ -27,6 +32,8 @@ void cpu_reset(CPU_type_t* cpu) {
  * effectively, increment the PC so it points to the next address
  * decrement the number of CPU cycles needed to fetch this instruction
  */
-//void cpu_fetch_instruction(CPU_type_t* cpu) {
-//    uint8_t opcode =
-//}
+void cpu_fetch_instruction(CPU_type_t* cpu, uint16_t* memory,  uint16_t* address) {
+    uint8_t opcode = memory[cpu->PC];
+    cpu->PC++;
+    cpu->cycles--; // check cycles
+}

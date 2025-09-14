@@ -2,7 +2,7 @@
 #include "types.h"
 #include "memory-map.h"
 
-/* SR bit masks */
+/* status register bit masks */
 #define N_MASK (1 << 7)
 #define V_MASK (1 << 6)
 #define IG_MASK (1 << 5)
@@ -12,19 +12,7 @@
 #define Z_MASK (1 << 1)
 #define C_MASK (1 << 0)
 
-/* status register */
-typedef struct sr {
-    unsigned int N:1;   /* negative */ // MSB
-    unsigned int V:1;   /* overflow */
-    unsigned int IG:1;  /* ignored */
-    unsigned int B:1;   /* break */
-    unsigned int D:1;   /* decimal for BCD arithmetics */
-    unsigned int I:1;   /* interrupt */
-    unsigned int Z:1;   /* zero */
-    unsigned int C:1;   /* carry */ // LSB
-} status_register_t;
-
-/* MOS 6502 CPU */
+/* 6502 CPU */
 typedef struct  {
     uint16_t PC;    /* program counter */
     uint8_t AC;     /* accumulator */
@@ -134,7 +122,18 @@ struct instruction {
 };
 
 //uint8_t opcode;
+
+/**
+ * reset the CPU to after-reset register values
+ * see datasheet
+ */
 void cpu_reset(CPU_type_t*);
-void cpu_fetch_instruction(CPU_type_t*, uint16_t* address);
+
+/**
+ * fetch instruction from memory at the address pointed to by PC
+ * @param m
+ * @param address
+ */
+void cpu_fetch_instruction(CPU_type_t*, uint16_t* m,  uint16_t* address);
 void cpu_decode_instruction();
 
