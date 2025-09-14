@@ -1,15 +1,12 @@
 cmake_minimum_required(VERSION 3.5)
 project(6502-CPU-Emulator)
 
-add_executable(
-        main
-        src/main.c
-        src/cpu.c
-        src/memory-map.c
-)
+#add all source files
+file(GLOB SOURCES src/*.c)
 
-target_include_directories(
-        main PUBLIC
-        "$(CMAKE_CURRENT_SOURCE_DIR}/include"
-)
+# create an executable
+add_executable(main ${SOURCES} )
+
+# where to find headers
+target_include_directories(main PRIVATE include)
 
