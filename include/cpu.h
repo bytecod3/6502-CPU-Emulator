@@ -2,6 +2,16 @@
 #include "types.h"
 #include "memory-map.h"
 
+/* SR bit masks */
+#define N_MASK (1 << 7)
+#define V_MASK (1 << 6)
+#define IG_MASK (1 << 5)
+#define B_MASK (1 << 4)
+#define D_MASK (1 << 3)
+#define I_MASK (1 << 2)
+#define Z_MASK (1 << 1)
+#define C_MASK (1 << 0)
+
 /* status register */
 typedef struct sr {
     unsigned int N:1;   /* negative */ // MSB
@@ -20,7 +30,7 @@ typedef struct  {
     uint8_t AC;     /* accumulator */
     uint8_t X;      /* index register X */
     uint8_t Y;      /* index register Y */
-    status_register_t SR;             /* status register */
+    uint8_t SR;             /* status register */
     uint8_t SP;     /* stack pointer */
 
     uint32_t cycles;
@@ -123,7 +133,7 @@ struct instruction {
 
 };
 
-uint8_t opcode;
+//uint8_t opcode;
 void cpu_reset(CPU_type_t*);
 void cpu_fetch_instruction(CPU_type_t*, uint16_t* address);
 void cpu_decode_instruction();

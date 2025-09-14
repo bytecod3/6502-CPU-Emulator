@@ -13,10 +13,13 @@
 void cpu_reset(CPU_type_t* cpu) {
     cpu->PC = 0xFFFC; // load PC with the reset
     cpu->SP = 0xFF;
-    cpu->SR = 0x00;
+//    cpu->SR = 0x00;
     cpu->AC = 0x00;
     cpu->X = 0x00;
     cpu->Y = 0x00;
+
+    cpu->SR &= ~(N_MASK);
+
 }
 
 /**

@@ -7,6 +7,8 @@ file(GLOB SOURCES src/*.c)
 # create an executable
 add_executable(main ${SOURCES} )
 
+include_directories(include)
+
 # where to find headers
 target_include_directories(main PRIVATE include)
 

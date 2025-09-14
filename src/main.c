@@ -23,7 +23,7 @@ int main() {
      * alternatively we could have stored a memory object in the CPU and set it to zero on
      * CPU reset but this is not a standard implementation since memory is outside the
      * CPU
-     * */
+     */
     cpu_reset(p_6502);
     memory_initialize(p_mem);
 
