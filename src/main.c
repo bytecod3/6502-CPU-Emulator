@@ -28,11 +28,11 @@ int main() {
     uint16_t* m = memory_initialize(p_mem);
 
     // simple program
-
     m[0xFFFC] = 0xA9;
     m[0xFFFD] = 0x34;
 
     // end simple program
+
 
 
     return 0;

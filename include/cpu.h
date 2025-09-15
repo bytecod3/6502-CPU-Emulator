@@ -25,7 +25,7 @@ typedef struct  {
 } CPU_type_t;
 
 /* addressing modes */
-enum addressing_modes {
+typedef enum addressing_modes {
     ABSOLUTE_A = 0,
     ABSOLUTE_INDEXED_INDIRECT,
     ABSOLUTE_INDEXED_WITH_X,
@@ -42,86 +42,107 @@ enum addressing_modes {
     ZERO_PAGE_INDEXED_WITH_Y,
     ZERO_PAGE_INDIRECT,
     ZERO_PAGE_INDIRECT_INDEXED_WITH_Y,
-};
+} Addressing_mode;
 
-/* opcode matrix table  */
-//uint8_t OPCODES[16][16] = {
-//        {}
-//};
+/*
+ * @brief OpCodes
+ * MOS6502 opcodes arranged alphabetically
+ */
+typedef enum OPCODES {
+    ADC,    ///< add with carry
+    AND,    ///< AND Memory with accumulator
+    ASL,    ///< shift one bit left
+    BCC,    ///< branch on carry clear
+    BCS,    ///< branch on carry set
+    BEQ,    ///< branch on result zero
+    BIT,    ///< test memory bits with accumulator
+    BMI,    ///< branch on result minus
+    BNE,    ///< branch on result not zero
+    BPL,    ///< branch on result plus
+    BRA,    ///< branch always
+    BRK,    ///< force break
+    BVC,    ///< branch on overflow clear
+    BVS,    ///< branch on overflow set
+    CLC,    ///< clear carry flag
+    CLD,    ///< clear decimal mode
+    CLI,    ///< clear interrupt disable bit
+    CLV,    ///< clear overlow flag
+    CMP,    ///< compare memory and accumulator
+    CPX,    ///< compare memory and index X
+    CPY,    ///< compare memory and index Y
+    DEC,    ///< decrement by one
+    DEX,    ///< decrement index X by one
+    DEY,    ///< decrement index Y by one
+    EOR,    ///< Exclusive-or memory with accumulator
+    INC,    ///< increment by one
+    INX,    ///< increment index X by one
+    INY,    ///< increment index Y by one
+    JMP,    ///< jump to new location
+    JSR,    ///< jump to new location saving return address
+    LDA,    ///< load accumulator with memory
+    LDX,    ///< load index X with memory
+    LDY,    ///< load index Y with memory
+    LSR,    ///< shift one bit right
+    NOP,    ///< no operation
+    CRA,    ///< OR memory with accumulator
+    PHA,    ///< push accumulator on stack
+    PHP,    ///< push processor status on stack
+    PHX,    ///< push index X on stack
+    PHY,    ///< push index Y on stack
+    PLA,    ///< pull accumulator from stack
+    PLP,    ///< pull processor status from stack
+    PLX,    ///< pull index Y from stack
+    PLY,    ///< pull index Y from stack
+    ROL,    ///< rotate one bit left
+    ROR,    ///< rotate one bit right
+    RTI,    ///< return from interrupt
+    RTS,    ///< return from subroutine
+    SBC,    ///< subtract memory from accumulator with borrow
+    SEC,    ///< set carry flag
+    SED,    ///< set decimal mode
+    SEI,    ///< set interrupt disable bit
+    STA,    ///< store accumulator in memory
+    STX,    ///< store index X in memory
+    STY,    ///< store index Y in memory
+    STZ,    ///< store zero in memory
+    TAX,    ///< transfer accumulator to index X
+    TAY,    ///< transfer accumulator to index Y
+    TRB,    ///< test and reset memory bits with accumulator
+    TSB,    ///< test and set memory bits with accumulator
+    TSX,    ///< transfer stack pointer to index X
+    TXA,    ///< transfer index Y to accumulator
+    TXS,    ///< transfer index X to stack pointer
+    TYA     ///< transfer index Y to accumulator
+} Opcode;
 
-/* opcodes */
-enum OPCODES {
-    ADC,
-    AND,
-    ASL,
-    DCC,
-    BCS,
-    BEQ,
-    BIT,
-    BMI,
-    BNE,
-    BPL,
-    BRA,
-    BRK,
-    BVC,
-    CLC,
-    CLD,
-    CLI,
-    CLV,
-    CMP,
-    CPX,
-    CPY,
-    DEC,
-    DEX,
-    DEY,
-    EOR,
-    INC,
-    INX,
-    INY,
-    JMP,
-    JSR,
-    LDA,
-    LDX,
-    LDY,
-    LSR,
-    NOP,
-    CRA,
-    PHA,
-    PHP,
-    PHX,
-    PHY,
-    PLA,
-    PLP,
-    PLX,
-    PLY,
-    ROL,
-    ROR,
-    RTI,
-    RTS,
-    SBC,
-    SEC,
-    SED,
-    SEI,
-    STA,
-    STX,
-    STY,
-    STZ,
-    TAX,
-    TAY,
-    TRB,
-    TSB,
-    TSX,
-    TZA,
-    TXS,
-    TYA
-};
-
-// todo:assuming immediate mode addressing
+/**
+ * @brief Instruction
+ * An instruction is made up of the opcode and the
+ */
 struct instruction {
+    Opcode opcode;
 
 };
 
-//uint8_t opcode;
+/**
+ * @broef addressing modes table
+ * This table is a 16x16 array that stores the addressing mode for each instruction as defined
+ * in the datasheet
+ *
+ * When an opcode is fetched from program memory, we cross-reference it with this table to find out
+ * which addressing mode we are using
+ *
+ * The addressing mode will determine what the next byte fetched from memory represents
+ *
+ */
+
+static Addressing_mode[16][16] = {
+        /* LOW NIBBLE         | 0 |      1                         | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F */
+        /* HIGH NIBBLE */      {STACK}, {ZERO_PAGE_INDEXED_WITH_X}
+};
+
+
+
 
 /**
  * reset the CPU to after-reset register values
@@ -135,5 +156,9 @@ void cpu_reset(CPU_type_t*);
  * @param address
  */
 void cpu_fetch_instruction(CPU_type_t*, uint16_t* m,  uint16_t* address);
+
+/**
+ * @brief decodes instruction fetched from memory
+ */
 void cpu_decode_instruction();
 
