@@ -96,6 +96,7 @@ $(document).ready(function(){initNavTree('cpu_8h.html',''); initResizable(); });
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -135,28 +136,38 @@ Macros</h2></td></tr>
 <tr class="memitem:aca37b601747cdfae8bcafb20305012e1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpu_8h.html#aca37b601747cdfae8bcafb20305012e1">C_MASK</a>&#160;&#160;&#160;(1 &lt;&lt; 0)</td></tr>
 <tr class="separator:aca37b601747cdfae8bcafb20305012e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a8f0174809022555709491ec66d434f15"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4">addressing_modes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpu_8h.html#a8f0174809022555709491ec66d434f15">Addressing_mode</a></td></tr>
+<tr class="memdesc:a8f0174809022555709491ec66d434f15"><td class="mdescLeft">&#160;</td><td class="mdescRight">addressing modes table This table is a 16x16 array that stores the addressing mode for each instruction as defined in the datasheet  <a href="cpu_8h.html#a8f0174809022555709491ec66d434f15">More...</a><br /></td></tr>
+<tr class="separator:a8f0174809022555709491ec66d434f15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab148e48f12961aa67ccd28f19fbd96e4"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83e">OPCODES</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpu_8h.html#ab148e48f12961aa67ccd28f19fbd96e4">Opcode</a></td></tr>
+<tr class="separator:ab148e48f12961aa67ccd28f19fbd96e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:afe4dfc1a95360a4b9e28e68b5ce7c3a4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4">addressing_modes</a> { <br />
-&#160;&#160;<a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a31d83ebb82d92d48ad93fdfc25cc4040">ABSOLUTE_A</a> = 0
-, <a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4ac7113c54dd8c84bda4f7c64606726932">ABSOLUTE_INDEXED_INDIRECT</a>
-, <a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4ae287d5345c5833c6282a79ad615b7693">ABSOLUTE_INDEXED_WITH_X</a>
-, <a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a940b507c7407b42815ce883d50d29766">ABSOLUTE_INDEXED_WITH_Y</a>
+&#160;&#160;<a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a27e82afb3be95af431498db062862a3a">ABS_A</a>
+, <a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4af150fdf61ad38d02cd687fedd335e9e2">ABS_INDX_IND</a>
+, <a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a213ddb7ecbe5254f03aedf82e4d2ef49">ABS_INDX_X</a>
+, <a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a71bb7c41a0c49d9497bacf30d8bc6e09">ABS_INDX_Y</a>
 , <br />
-&#160;&#160;<a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4ab1d1df6cf9a8833422d75bbf123c8ea7">ABSOLUTE_INDIRECT</a>
-, <a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a97a93d8f732e91afd5d5bf6cd5db7093">ACCUMULATOR</a>
-, <a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a852c0d7d3f301372dbdea6650134271c">IMMEDIATE_ADDRESSING</a>
-, <a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a1fe43c0c00fe86814d52ead3713ffd05">IMPLIED</a>
+&#160;&#160;<a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4afacb7d91a17c1a266560be0a0d2158f6">ABS_IND</a>
+, <a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4aa6cd1d230aaca43e44f87cd2aab71c83">ACC</a>
+, <a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4aa77e6848bc2c2031677291053c6badaa">IMM</a>
+, <a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a8054fa474b4ee38123cfeed70397e6f4">IMP</a>
 , <br />
-&#160;&#160;<a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a9a55bd6d2cf9b1a54213bd74d9aa4db4">PROGRAM_COUNTER_RELATIVE</a>
-, <a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a3bfeb3e4822bcc96abf42601a42bbcd3">STACK</a>
-, <a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4ae374d787a571b3ec4ee7982cd55cac61">ZERO_PAGE</a>
-, <a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a0645c375fb66f7222ad56114209506fc">ZERO_PAGE_INDEXED_INDIRECT</a>
+&#160;&#160;<a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a92f6d0cd5dab7116b6b022d54c664256">PC_REL</a>
+, <a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a85bed89798b895446d5da5c54fc40b5c">STK</a>
+, <a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4ac1f6be440a6f46596c2f74d31758fabd">ZPG</a>
+, <a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a2243498d2e80f805d1f354b5d9dbf286">ZPG_INDX_IND</a>
 , <br />
-&#160;&#160;<a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4acc1e0cb8cf396f15f7de865261707b62">ZERO_PAGE_INDEXED_WITH_X</a>
-, <a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a8944891e1dbc23a48750e20e7ec79129">ZERO_PAGE_INDEXED_WITH_Y</a>
-, <a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4aebc74065249e0905998041691d01ae4b">ZERO_PAGE_INDIRECT</a>
-, <a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4ac045f1a940833912f39ad789251b084d">ZERO_PAGE_INDIRECT_INDEXED_WITH_Y</a>
+&#160;&#160;<a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a2870a1ffbc7b51c9f8cec6c0bc7e20ae">ZPG_INDX_X</a>
+, <a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4ac149465e4c9392dd3698e4cd36fb1ce0">ZPG_INDX_Y</a>
+, <a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a0c3d2766021ea4f144cbd33d59a05e93">ZPG_IND</a>
+, <a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4ad552c315a238b02bdccc4cdca03f19b0">ZPG_IND_INDX_Y</a>
+, <br />
+&#160;&#160;<a class="el" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a003b741848d7128e25831a8376672700">INV</a>
 <br />
  }</td></tr>
 <tr class="separator:afe4dfc1a95360a4b9e28e68b5ce7c3a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -367,6 +378,53 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a8f0174809022555709491ec66d434f15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f0174809022555709491ec66d434f15">&#9670;&nbsp;</a></span>Addressing_mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="cpu_8h.html#a8f0174809022555709491ec66d434f15">Addressing_mode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">        </div>
+<div class="line">                        {<a class="code" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a85bed89798b895446d5da5c54fc40b5c">STK</a>,        <a class="code" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a2870a1ffbc7b51c9f8cec6c0bc7e20ae">ZPG_INDX_X</a>,         <a class="code" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a003b741848d7128e25831a8376672700">INV</a>,        <a class="code" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a003b741848d7128e25831a8376672700">INV</a>,        <a class="code" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4ac1f6be440a6f46596c2f74d31758fabd">ZPG</a>,        <a class="code" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4ac1f6be440a6f46596c2f74d31758fabd">ZPG</a>,        <a class="code" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4ac1f6be440a6f46596c2f74d31758fabd">ZPG</a>,        <a class="code" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4ac1f6be440a6f46596c2f74d31758fabd">ZPG</a>,        <a class="code" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a85bed89798b895446d5da5c54fc40b5c">STK</a>,        <a class="code" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4aa77e6848bc2c2031677291053c6badaa">IMM</a>,        <a class="code" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4aa6cd1d230aaca43e44f87cd2aab71c83">ACC</a>,        <a class="code" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a003b741848d7128e25831a8376672700">INV</a>,        <a class="code" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a27e82afb3be95af431498db062862a3a">ABS_A</a>,      <a class="code" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a27e82afb3be95af431498db062862a3a">ABS_A</a>,      <a class="code" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a27e82afb3be95af431498db062862a3a">ABS_A</a>,      <a class="code" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a92f6d0cd5dab7116b6b022d54c664256">PC_REL</a> },</div>
+<div class="line">                         {<a class="code" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a92f6d0cd5dab7116b6b022d54c664256">PC_REL</a>,    <a class="code" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4ac149465e4c9392dd3698e4cd36fb1ce0">ZPG_INDX_Y</a>,         <a class="code" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4ac1f6be440a6f46596c2f74d31758fabd">ZPG</a>,        <a class="code" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a003b741848d7128e25831a8376672700">INV</a>,        <a class="code" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4ac1f6be440a6f46596c2f74d31758fabd">ZPG</a>,  <a class="code" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a2870a1ffbc7b51c9f8cec6c0bc7e20ae">ZPG_INDX_X</a>,  <a class="code" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a2870a1ffbc7b51c9f8cec6c0bc7e20ae">ZPG_INDX_X</a>,      <a class="code" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4ac1f6be440a6f46596c2f74d31758fabd">ZPG</a>,       <a class="code" href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4aa77e6848bc2c2031677291053c6badaa">IMM</a>,        }</div>
+<div class="line">}</div>
+<div class="ttc" id="acpu_8h_html_afe4dfc1a95360a4b9e28e68b5ce7c3a4a003b741848d7128e25831a8376672700"><div class="ttname"><a href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a003b741848d7128e25831a8376672700">INV</a></div><div class="ttdeci">@ INV</div><div class="ttdef"><b>Definition:</b> cpu.h:45</div></div>
+<div class="ttc" id="acpu_8h_html_afe4dfc1a95360a4b9e28e68b5ce7c3a4a27e82afb3be95af431498db062862a3a"><div class="ttname"><a href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a27e82afb3be95af431498db062862a3a">ABS_A</a></div><div class="ttdeci">@ ABS_A</div><div class="ttdef"><b>Definition:</b> cpu.h:29</div></div>
+<div class="ttc" id="acpu_8h_html_afe4dfc1a95360a4b9e28e68b5ce7c3a4a2870a1ffbc7b51c9f8cec6c0bc7e20ae"><div class="ttname"><a href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a2870a1ffbc7b51c9f8cec6c0bc7e20ae">ZPG_INDX_X</a></div><div class="ttdeci">@ ZPG_INDX_X</div><div class="ttdef"><b>Definition:</b> cpu.h:41</div></div>
+<div class="ttc" id="acpu_8h_html_afe4dfc1a95360a4b9e28e68b5ce7c3a4a85bed89798b895446d5da5c54fc40b5c"><div class="ttname"><a href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a85bed89798b895446d5da5c54fc40b5c">STK</a></div><div class="ttdeci">@ STK</div><div class="ttdef"><b>Definition:</b> cpu.h:38</div></div>
+<div class="ttc" id="acpu_8h_html_afe4dfc1a95360a4b9e28e68b5ce7c3a4a92f6d0cd5dab7116b6b022d54c664256"><div class="ttname"><a href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a92f6d0cd5dab7116b6b022d54c664256">PC_REL</a></div><div class="ttdeci">@ PC_REL</div><div class="ttdef"><b>Definition:</b> cpu.h:37</div></div>
+<div class="ttc" id="acpu_8h_html_afe4dfc1a95360a4b9e28e68b5ce7c3a4aa6cd1d230aaca43e44f87cd2aab71c83"><div class="ttname"><a href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4aa6cd1d230aaca43e44f87cd2aab71c83">ACC</a></div><div class="ttdeci">@ ACC</div><div class="ttdef"><b>Definition:</b> cpu.h:34</div></div>
+<div class="ttc" id="acpu_8h_html_afe4dfc1a95360a4b9e28e68b5ce7c3a4aa77e6848bc2c2031677291053c6badaa"><div class="ttname"><a href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4aa77e6848bc2c2031677291053c6badaa">IMM</a></div><div class="ttdeci">@ IMM</div><div class="ttdef"><b>Definition:</b> cpu.h:35</div></div>
+<div class="ttc" id="acpu_8h_html_afe4dfc1a95360a4b9e28e68b5ce7c3a4ac149465e4c9392dd3698e4cd36fb1ce0"><div class="ttname"><a href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4ac149465e4c9392dd3698e4cd36fb1ce0">ZPG_INDX_Y</a></div><div class="ttdeci">@ ZPG_INDX_Y</div><div class="ttdef"><b>Definition:</b> cpu.h:42</div></div>
+<div class="ttc" id="acpu_8h_html_afe4dfc1a95360a4b9e28e68b5ce7c3a4ac1f6be440a6f46596c2f74d31758fabd"><div class="ttname"><a href="cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4ac1f6be440a6f46596c2f74d31758fabd">ZPG</a></div><div class="ttdeci">@ ZPG</div><div class="ttdef"><b>Definition:</b> cpu.h:39</div></div>
+</div><!-- fragment -->
+<p>addressing modes table This table is a 16x16 array that stores the addressing mode for each instruction as defined in the datasheet </p>
+<p>When an opcode is fetched from program memory, we cross-reference it with this table to find out which addressing mode we are using</p>
+<p>The addressing mode will determine what the next byte fetched from memory represents </p>
+
+</div>
+</div>
+<a id="ab148e48f12961aa67ccd28f19fbd96e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab148e48f12961aa67ccd28f19fbd96e4">&#9670;&nbsp;</a></span>Opcode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83e">OPCODES</a> <a class="el" href="cpu_8h.html#ab148e48f12961aa67ccd28f19fbd96e4">Opcode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afe4dfc1a95360a4b9e28e68b5ce7c3a4">&#9670;&nbsp;</a></span>addressing_modes</h2>
@@ -380,22 +438,40 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4a31d83ebb82d92d48ad93fdfc25cc4040"></a>ABSOLUTE_A&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4ac7113c54dd8c84bda4f7c64606726932"></a>ABSOLUTE_INDEXED_INDIRECT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4ae287d5345c5833c6282a79ad615b7693"></a>ABSOLUTE_INDEXED_WITH_X&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4a940b507c7407b42815ce883d50d29766"></a>ABSOLUTE_INDEXED_WITH_Y&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4ab1d1df6cf9a8833422d75bbf123c8ea7"></a>ABSOLUTE_INDIRECT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4a97a93d8f732e91afd5d5bf6cd5db7093"></a>ACCUMULATOR&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4a852c0d7d3f301372dbdea6650134271c"></a>IMMEDIATE_ADDRESSING&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4a1fe43c0c00fe86814d52ead3713ffd05"></a>IMPLIED&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4a9a55bd6d2cf9b1a54213bd74d9aa4db4"></a>PROGRAM_COUNTER_RELATIVE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4a3bfeb3e4822bcc96abf42601a42bbcd3"></a>STACK&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4ae374d787a571b3ec4ee7982cd55cac61"></a>ZERO_PAGE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4a0645c375fb66f7222ad56114209506fc"></a>ZERO_PAGE_INDEXED_INDIRECT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4acc1e0cb8cf396f15f7de865261707b62"></a>ZERO_PAGE_INDEXED_WITH_X&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4a8944891e1dbc23a48750e20e7ec79129"></a>ZERO_PAGE_INDEXED_WITH_Y&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4aebc74065249e0905998041691d01ae4b"></a>ZERO_PAGE_INDIRECT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4ac045f1a940833912f39ad789251b084d"></a>ZERO_PAGE_INDIRECT_INDEXED_WITH_Y&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4a27e82afb3be95af431498db062862a3a"></a>ABS_A&#160;</td><td class="fielddoc"><p>absolute </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4af150fdf61ad38d02cd687fedd335e9e2"></a>ABS_INDX_IND&#160;</td><td class="fielddoc"><p>absolute indexed indirect </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4a213ddb7ecbe5254f03aedf82e4d2ef49"></a>ABS_INDX_X&#160;</td><td class="fielddoc"><p>absolute indexed with X </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4a71bb7c41a0c49d9497bacf30d8bc6e09"></a>ABS_INDX_Y&#160;</td><td class="fielddoc"><p>absolute indexed with Y </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4afacb7d91a17c1a266560be0a0d2158f6"></a>ABS_IND&#160;</td><td class="fielddoc"><p>absolute indirect </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4aa6cd1d230aaca43e44f87cd2aab71c83"></a>ACC&#160;</td><td class="fielddoc"><p>accumulator </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4aa77e6848bc2c2031677291053c6badaa"></a>IMM&#160;</td><td class="fielddoc"><p>immediate </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4a8054fa474b4ee38123cfeed70397e6f4"></a>IMP&#160;</td><td class="fielddoc"><p>implied </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4a92f6d0cd5dab7116b6b022d54c664256"></a>PC_REL&#160;</td><td class="fielddoc"><p>program counter relative </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4a85bed89798b895446d5da5c54fc40b5c"></a>STK&#160;</td><td class="fielddoc"><p>stack </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4ac1f6be440a6f46596c2f74d31758fabd"></a>ZPG&#160;</td><td class="fielddoc"><p>zero page </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4a2243498d2e80f805d1f354b5d9dbf286"></a>ZPG_INDX_IND&#160;</td><td class="fielddoc"><p>zero page indexed indirect </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4a2870a1ffbc7b51c9f8cec6c0bc7e20ae"></a>ZPG_INDX_X&#160;</td><td class="fielddoc"><p>zero page indexed with X </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4ac149465e4c9392dd3698e4cd36fb1ce0"></a>ZPG_INDX_Y&#160;</td><td class="fielddoc"><p>zero page indexed with Y </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4a0c3d2766021ea4f144cbd33d59a05e93"></a>ZPG_IND&#160;</td><td class="fielddoc"><p>zero page indirect </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4ad552c315a238b02bdccc4cdca03f19b0"></a>ZPG_IND_INDX_Y&#160;</td><td class="fielddoc"><p>zero page indexed indirect with Y </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe4dfc1a95360a4b9e28e68b5ce7c3a4a003b741848d7128e25831a8376672700"></a>INV&#160;</td><td class="fielddoc"><p>invalid mode </p>
+</td></tr>
 </table>
 
 </div>

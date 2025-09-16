@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['word_143',['word',['../types_8h.html#aacc262b7acb8ef2b1d38df8b855bc0f6',1,'types.h']]]
+  ['memory_5ftype_5ft_150',['Memory_type_t',['../memory-map_8h.html#aa728cca39a5aa6612d0fe05e113d4be0',1,'memory-map.h']]]
 ];

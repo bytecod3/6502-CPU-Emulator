@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['memory_5ftype_5ft_142',['Memory_type_t',['../memory-map_8h.html#aa728cca39a5aa6612d0fe05e113d4be0',1,'memory-map.h']]]
+  ['byte_149',['byte',['../types_8h.html#ab8ef12fab634c171394422d0ee8baf94',1,'types.h']]]
 ];

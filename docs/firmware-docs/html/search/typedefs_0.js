@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['byte_141',['byte',['../types_8h.html#ab8ef12fab634c171394422d0ee8baf94',1,'types.h']]]
+  ['addressing_5fmode_148',['Addressing_mode',['../cpu_8h.html#a8f0174809022555709491ec66d434f15',1,'cpu.h']]]
 ];

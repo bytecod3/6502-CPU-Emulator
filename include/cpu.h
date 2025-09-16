@@ -26,22 +26,23 @@ typedef struct  {
 
 /* addressing modes */
 typedef enum addressing_modes {
-    ABSOLUTE_A = 0,
-    ABSOLUTE_INDEXED_INDIRECT,
-    ABSOLUTE_INDEXED_WITH_X,
-    ABSOLUTE_INDEXED_WITH_Y,
-    ABSOLUTE_INDIRECT,
-    ACCUMULATOR,
-    IMMEDIATE_ADDRESSING,
-    IMPLIED,
-    PROGRAM_COUNTER_RELATIVE,
-    STACK,
-    ZERO_PAGE,
-    ZERO_PAGE_INDEXED_INDIRECT,
-    ZERO_PAGE_INDEXED_WITH_X,
-    ZERO_PAGE_INDEXED_WITH_Y,
-    ZERO_PAGE_INDIRECT,
-    ZERO_PAGE_INDIRECT_INDEXED_WITH_Y,
+    ABS_A,                          /*!< absolute */
+    ABS_INDX_IND,                    /*!< absolute indexed indirect */
+    ABS_INDX_X,                      /*!< absolute indexed with X */
+    ABS_INDX_Y,                      /*!< absolute indexed with Y */
+    ABS_IND,                        /*!< absolute indirect */
+    ACC,                             /*!< accumulator */
+    IMM,                           /*!< immediate */
+    IMP,                            /*!< implied */
+    PC_REL,                         /*!< program counter relative */
+    STK,                            /*!< stack */
+    ZPG,                           /*!< zero page */
+    ZPG_INDX_IND,                          /*!< zero page indexed indirect*/
+    ZPG_INDX_X,                         /*!< zero page indexed with X */
+    ZPG_INDX_Y,                     /*!< zero page indexed with Y */
+    ZPG_IND,                        /*!< zero page indirect */
+    ZPG_IND_INDX_Y,                  /*!< zero page indexed indirect with Y */
+    INV                             /*!< invalid mode */
 } Addressing_mode;
 
 /*
@@ -121,11 +122,12 @@ typedef enum OPCODES {
  */
 struct instruction {
     Opcode opcode;
+    Addressing_mode addr_mode;
 
 };
 
 /**
- * @broef addressing modes table
+ * @brief addressing modes table
  * This table is a 16x16 array that stores the addressing mode for each instruction as defined
  * in the datasheet
  *
@@ -137,8 +139,9 @@ struct instruction {
  */
 
 static Addressing_mode[16][16] = {
-        /* LOW NIBBLE         | 0 |      1                         | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F */
-        /* HIGH NIBBLE */      {STACK}, {ZERO_PAGE_INDEXED_WITH_X}
+        /* HI/LOW               |      0 |       1    |        2    |     3     |    4      |   5       |     6     |     7    |      8    |      9     |     A    |     B      |      C      |      D    |     E     |     F       */
+        /* 0 */                {STK,        ZPG_INDX_X,         INV,        INV,        ZPG,        ZPG,        ZPG,        ZPG,        STK,        IMM,        ACC,        INV,        ABS_A,      ABS_A,      ABS_A,      PC_REL },
+        /* 1 */                 {PC_REL,    ZPG_INDX_Y,         ZPG,        INV,        ZPG,  ZPG_INDX_X,  ZPG_INDX_X,      ZPG,       IMM,        }
 };
 
 
