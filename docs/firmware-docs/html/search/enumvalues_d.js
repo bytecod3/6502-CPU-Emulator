@@ -1,9 +1,11 @@
 var searchData=
 [
-  ['zpg_230',['ZPG',['../cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4ac1f6be440a6f46596c2f74d31758fabd',1,'cpu.h']]],
-  ['zpg_5find_231',['ZPG_IND',['../cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a0c3d2766021ea4f144cbd33d59a05e93',1,'cpu.h']]],
-  ['zpg_5find_5findx_5fy_232',['ZPG_IND_INDX_Y',['../cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4ad552c315a238b02bdccc4cdca03f19b0',1,'cpu.h']]],
-  ['zpg_5findx_5find_233',['ZPG_INDX_IND',['../cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a2243498d2e80f805d1f354b5d9dbf286',1,'cpu.h']]],
-  ['zpg_5findx_5fx_234',['ZPG_INDX_X',['../cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a2870a1ffbc7b51c9f8cec6c0bc7e20ae',1,'cpu.h']]],
-  ['zpg_5findx_5fy_235',['ZPG_INDX_Y',['../cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4ac149465e4c9392dd3698e4cd36fb1ce0',1,'cpu.h']]]
+  ['tax_296',['TAX',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83ea30e59148af45aa6e6ab6bf5250a83f95',1,'cpu.h']]],
+  ['tay_297',['TAY',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83ea622557b150afb7ff218874f94b9b14d3',1,'cpu.h']]],
+  ['trb_298',['TRB',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83eac358e1dcd5777dee1ebb067db3a38312',1,'cpu.h']]],
+  ['tsb_299',['TSB',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83eaa1db2fda3437de412088adca05374c0d',1,'cpu.h']]],
+  ['tsx_300',['TSX',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83ea086d8d41b3488c605c7c12a36e6fbf03',1,'cpu.h']]],
+  ['txa_301',['TXA',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83ea7cc80c602df128c9b69dfcd1f5654d5a',1,'cpu.h']]],
+  ['txs_302',['TXS',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83ea9872fdd3c5c190637df6f6342b0baad6',1,'cpu.h']]],
+  ['tya_303',['TYA',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83ea2091c9ac362b3cf9cbc76840cdb09270',1,'cpu.h']]]
 ];

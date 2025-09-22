@@ -86,7 +86,7 @@ typedef enum OPCODES {
     LDY,    ///< load index Y with memory
     LSR,    ///< shift one bit right
     NOP,    ///< no operation
-    CRA,    ///< OR memory with accumulator
+    ORA,    ///< OR memory with accumulator
     PHA,    ///< push accumulator on stack
     PHP,    ///< push processor status on stack
     PHX,    ///< push index X on stack
@@ -107,6 +107,7 @@ typedef enum OPCODES {
     STX,    ///< store index X in memory
     STY,    ///< store index Y in memory
     STZ,    ///< store zero in memory
+    STP,
     TAX,    ///< transfer accumulator to index X
     TAY,    ///< transfer accumulator to index Y
     TRB,    ///< test and reset memory bits with accumulator
@@ -114,7 +115,42 @@ typedef enum OPCODES {
     TSX,    ///< transfer stack pointer to index X
     TXA,    ///< transfer index Y to accumulator
     TXS,    ///< transfer index X to stack pointer
-    TYA     ///< transfer index Y to accumulator
+    TYA,     ///< transfer index Y to accumulator
+    WAI,
+    INVLD,      ///< invalid operation
+
+    BBR0,
+    BBR1,
+    BBR2,
+    BBR3,
+    BBR4,
+    BBR5,
+    BBR6,
+    BBR7,
+    BBS0,
+    BBS1,
+    BBS2,
+    BBS3,
+    BBS4,
+    BBS5,
+    BBS6,
+    BBS7,
+    RMBO,
+    RMB1,
+    RMB2,
+    RMB3,
+    RMB4,
+    RMB5,
+    RMB6,
+    RMB7,
+    SMB0,
+    SMB1,
+    SMB2,
+    SMB3,
+    SMB4,
+    SMB5,
+    SMB6,
+    SMB7
 } Opcode;
 
 /**
@@ -138,7 +174,6 @@ struct instruction {
  * The addressing mode will determine what the next byte fetched from memory represents
  *
  */
-
 static Addressing_mode addressing_modes[16][16] = {
         /* HI/LOW               |      0            |       1         |        2          |       3      |         4      |   5             |     6              |     7     |      8           |      9     |          A           |     B      |       C      |            D    |            E     |         F       */
         /* 0 */                {STK,        ZPG_INDX_X,         INV,        INV,        ZPG,        ZPG,        ZPG,        ZPG,       STK,        IMM,        ACC,        INV,        ABS_A,      ABS_A,      ABS_A,          PC_REL },
@@ -159,7 +194,28 @@ static Addressing_mode addressing_modes[16][16] = {
         /* F */                { PC_REL, ZPG_INDX_Y,    ZPG_IND,        INV,            INV, ZPG_INDX_X,  ZPG_INDX_X,     ZPG,         IMP, ABS_INDX_Y,     STK,            INV,        INV,    ABS_INDX_X, ABS_INDX_X,         PC_REL }
 };
 
-
+/**
+ * @brief this table stores the op codes in a 16x16 table
+ */
+static Opcode opcodes[16][16] = {
+        /* HI/LOW   |   0  |               1   |              2   |            3    |          4           |   5           |   6    |          7   |           8  |            9   |           A    |          B      |               C            |     D     |    E  |               F       */
+        /* 0 */ {BRK,       ORA,        INVLD,      INVLD,      TSB,        ORA,        ASL,        RMBO,       PHP,        ORA,        ASL,        INVLD,      TSB,        ORA,        ASL,        BBR0 },
+        /* 1 */ {BPL,       ORA,        ORA,        INVLD,      TRB,        ORA,        ASL,        RMB1,       CLC,        ORA,        INC,        INVLD,      TRB,        ORA,        ASL,        BBR1 },
+        /* 2 */ {JSR,       AND,        INVLD,      INVLD,      BIT,        AND,        ROL,        RMB2,       PLP,        AND,        ROL,        INVLD,      BIT,        AND,        ROL,        BBR2},
+        /* 3 */ {BMI,       AND,        AND,        INVLD,      BIT,        AND,        ROL,        RMB3,       SEC,        AND,        DEC,        INVLD,      BIT,        AND,        ROL,        BBR2},
+        /* 4 */ { RTI,      EOR,        INVLD,      INVLD,      INVLD,      EOR,        LSR,        RMB4,       PHA,        EOR,        LSR,        INVLD,      JMP,        EOR,        LSR,        BBR4 },
+        /* 5 */ { BVC,      EOR,        EOR,        INVLD,      INVLD,      EOR,        LSR,        RMB5,       CLI,        EOR,        PHY,        INVLD,      INVLD,      EOR,        LSR,        BBR5 },
+        /* 6 */ { RTS,      ADC,        INVLD,      INVLD,      STZ,        ADC,        ROR,        RMB6,       PLA,        ADC,        ROR,        INVLD,      JMP,        ADC,        ROR,        BBR6 },
+        /* 7 */ { BVS,      ADC,        ADC,        INVLD,      STZ,        ADC,        ROR,        RMB7,       SEI,        ADC,        PLY,        INVLD,      JMP,        ADC,        ROR,        BBR7 },
+        /* 8 */ { BRA,      STA,        INVLD,      INVLD,      STY,        STA,        STX,        SMB0,       DEY,        BIT,        TXA,        INVLD,      STY,        STA,        STX,        BBS0 },
+        /* 9 */ { BCC,      STA,        STA,        INVLD,      STY,        STA,        STX,        SMB1,       TYA,        STA,        TXS,        INVLD,      STZ,        STA,        STZ,        BBS1 },
+        /* A */ { LDY,      LDA,        LDX,        INVLD,      LDY,        LDA,        LDX,        SMB2,       TAY,        LDA,        TAX,        INVLD,      LDY,        LDA,        LDX,        BBS2 },
+        /* B */ { BCS,      LDA,        LDA,        INVLD,      LDY,        LDA,        LDX,        SMB3,       CLV,        LDA,        TSX,        INVLD,      LDY,        LDA,        LDX,        BBS3 },
+        /* C */ { CPY,      CMP,        INVLD,      INVLD,      CPY,        CMP,        DEC,        SMB4,       INY,        CMP,        DEX,        WAI,        CPY,        CMP,        DEC,        BBS4 },
+        /* D */ { BNE,      CMP,        CMP,        INVLD,      INVLD,      CMP,        DEC,        SMB5,       CLD,        CMP,        PHX,        STP,        INVLD,      CMP,        DEC,        BBS5 },
+        /* E */ { CPX,      SBC,        INVLD,      INVLD,      CPX,        SBC,        INC,        SMB6,       INX,        SBC,        NOP,        INVLD,      CPX,        SBC,        INC,        BBS6 },
+        /* F */  { BEQ,         SBC,        SBC,    INVLD,      INVLD,      SBC,        INC,        SMB7,       SED,        SBC,        PLX,        INVLD,      INVLD,      SBC,        INC,        BBS7 }
+};
 
 
 /**
