@@ -26,23 +26,24 @@ typedef struct  {
 
 /* addressing modes */
 typedef enum addressing_modes {
-    ABS_A,                          /*!< absolute */
-    ABS_INDX_IND,                    /*!< absolute indexed indirect */
-    ABS_INDX_X,                      /*!< absolute indexed with X */
-    ABS_INDX_Y,                      /*!< absolute indexed with Y */
-    ABS_IND,                        /*!< absolute indirect */
-    ACC,                             /*!< accumulator */
-    IMM,                           /*!< immediate */
-    IMP,                            /*!< implied */
-    PC_REL,                         /*!< program counter relative */
-    STK,                            /*!< stack */
-    ZPG,                           /*!< zero page */
-    ZPG_INDX_IND,                          /*!< zero page indexed indirect*/
-    ZPG_INDX_X,                         /*!< zero page indexed with X */
-    ZPG_INDX_Y,                     /*!< zero page indexed with Y */
-    ZPG_IND,                        /*!< zero page indirect */
-    ZPG_IND_INDX_Y,                  /*!< zero page indexed indirect with Y */
-    INV                             /*!< invalid mode */
+    ABS_A,                          /*!< a,  absolute */
+    ABS_INDX_IND,                    /*!< (a,x) absolute indexed indirect */
+    ABS_INDX_X,                      /*!< a,x absolute indexed with X */
+    ABS_INDX_Y,                      /*!< a,y absolute indexed with Y */
+    ABS_IND,                        /*!< (a) absolute indirect */
+    ACC,                             /*!< A accumulator */
+    IMM,                           /*!< # immediate */
+    IMP,                            /*!< i implied */
+    PC_REL,                         /*!< r program counter relative */
+    STK,                            /*!< s stack */
+    ZPG,                           /*!< zp zero page */
+    ZPG_INDX_IND,                  /*!< (zp,x) zero page indexed indirect*/
+    ZPG_INDX_X,                         /*!< zp,x zero page indexed with X */
+    ZPG_INDX_Y,                     /*!< zp,y zero page indexed with Y */
+    ZPG_IND,                        /*!< (zp) zero page indirect */
+    ZPG_IND_INDX_Y,                  /*!< (zp),y zero page indexed indirect with Y */
+    INV,                             /*!< invalid mode */
+    II              // WHICH IS THIS?
 } Addressing_mode;
 
 /*
@@ -138,10 +139,24 @@ struct instruction {
  *
  */
 
-static Addressing_mode[16][16] = {
-        /* HI/LOW               |      0 |       1    |        2    |     3     |    4      |   5       |     6     |     7    |      8    |      9     |     A    |     B      |      C      |      D    |     E     |     F       */
-        /* 0 */                {STK,        ZPG_INDX_X,         INV,        INV,        ZPG,        ZPG,        ZPG,        ZPG,        STK,        IMM,        ACC,        INV,        ABS_A,      ABS_A,      ABS_A,      PC_REL },
-        /* 1 */                 {PC_REL,    ZPG_INDX_Y,         ZPG,        INV,        ZPG,  ZPG_INDX_X,  ZPG_INDX_X,      ZPG,       IMM,        }
+static Addressing_mode addressing_modes[16][16] = {
+        /* HI/LOW               |      0            |       1         |        2          |       3      |         4      |   5             |     6              |     7     |      8           |      9     |          A           |     B      |       C      |            D    |            E     |         F       */
+        /* 0 */                {STK,        ZPG_INDX_X,         INV,        INV,        ZPG,        ZPG,        ZPG,        ZPG,       STK,        IMM,        ACC,        INV,        ABS_A,      ABS_A,      ABS_A,          PC_REL },
+        /* 1 */                 {PC_REL,    ZPG_INDX_Y,         ZPG,        INV,        ZPG,  ZPG_INDX_X,  ZPG_INDX_X,      ZPG,       IMP,        ABS_INDX_Y,  ACC,        INV,        ABS_A,      ABS_INDX_X, ABS_INDX_X,  PC_REL },
+        /* 2 */                 {ABS_A,     ZPG_INDX_X,         INV,         INV,       ZPG,         ZPG,          ZPG,       ZPG,     STK,           IMM,      ACC,        INV,        ABS_A,       ABS_A,     ABS_A,         PC_REL },
+        /* 3 */                 {PC_REL,    ZPG_INDX_Y,         ZPG,        INV,   ZPG_INDX_X,  ZPG_INDX_X,  ZPG_INDX_X,      ZPG,      II,     ABS_INDX_Y,       ACC,       INV,     ABS_INDX_X,   ABS_INDX_X, ABS_INDX_X,      PC_REL},
+        /* 4 */                 {STK,      ZPG_INDX_X,         INV,        INV,          INV,         ZPG,        ZPG,        ZPG,     STK,          IMM,        ACC,       INV,       ABS_A,       ABS_A,        ABS_A,      PC_REL},
+        /* 5 */                 {PC_REL,   ZPG_INDX_Y,          ZPG,        INV,         INV, ZPG_INDX_X, ZPG_INDX_X,         ZPG,     IMP,   ABS_INDX_Y,         STK,       INV,      ABS_IND,      ABS_A,      ABS_A,         PC_REL},
+        /* 6 */                 {STK,      ZPG_INDX_X,          INV,        INV,        ZPG,        ZPG,        ZPG,        ZPG,       STK,          IMM,       ACC,        INV,      ABS_A,         ABS_A,       ABS_A,        PC_REL},
+        /* 7 */                 {PC_REL,   ZPG_INDX_Y,          ZPG,        INV,  ZPG_INDX_X, ZPG_INDX_X, ZPG_INDX_X,       ZPG,       IMP,  ABS_INDX_Y,       STK,        INV,  ABS_INDX_X,    ABS_INDX_X, ABS_INDX_X,         PC_REL },
+        /* 8 */                 {PC_REL,   ZPG_INDX_IND,          INV,      INV,        ZPG,         ZPG,        ZPG,       ZPG,       IMP,         IMM,       IMP,        INV,        ABS_A,       ABS_A,       ABS_A,          PC_REL },
+        /* 9 */                 {PC_REL, ZPG_INDX_Y,          ZPG,        INV,   ZPG_INDX_X,  ZPG_INDX_X, ZPG_INDX_Y,       ZPG,       IMP,  ABS_INDX_Y,       IMP,        INV,         ACC,        ABS_A,        ABS_A,          PC_REL },
+        /* A */                { IMM,    ZPG_INDX_Y,        ZPG,         IMM,          INV,         ZPG,        ZPG,       ZPG,        ZPG, IMP,            IMM,           IMP,         INV,        ACC,         ABS_A,         PC_REL },
+        /* B */                 {PC_REL, ZPG_INDX_Y,        ZPG,         INV,    ZPG_INDX_X,  ZPG_INDX_X,  ZPG_INDX_Y,    ZPG,          IMP, ABS_INDX_Y,    IMP,            INV, ABS_INDX_X,   ABS_INDX_X,   ABS_INDX_Y,        PC_REL  },
+        /* C */                {IMM,     ZPG_INDX_X,        INV,        INV,            ZPG,        ZPG,         ZPG,      ZPG,        IMP, IMM,            IMP,            II,      ABS_A,         ABS_A,        ABS_A,        PC_REL  },
+        /* D */                {PC_REL,  ZPG_INDX_Y,        ZPG,        INV,            INV, ZPG_INDX_X,  ZPG_INDX_X,      ZPG,        IMP, ABS_INDX_Y,     STK,            II,         INV,    ABS_INDX_X,  ABS_INDX_Y,        PC_REL  },
+        /* E */                {IMM,     ZPG_INDX_X,        INV,        INV,            ZPG,        ZPG,         ZPG,     ZPG,         IMP, IMM,            IMP,            INV,       ABS_A,       ABS_A,        ABS_A,        PC_REL },
+        /* F */                { PC_REL, ZPG_INDX_Y,    ZPG_IND,        INV,            INV, ZPG_INDX_X,  ZPG_INDX_X,     ZPG,         IMP, ABS_INDX_Y,     STK,            INV,        INV,    ABS_INDX_X, ABS_INDX_X,         PC_REL }
 };
 
 
