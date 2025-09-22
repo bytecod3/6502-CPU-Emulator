@@ -1,3 +1,10 @@
+/**
+ * @file cpu.h
+ * @brief creates needed header definitions for CPU
+ * @author Edwin
+ * @email emwiti658@gmail.com
+ */
+
 #include <stdint.h>
 #include "types.h"
 #include "memory-map.h"

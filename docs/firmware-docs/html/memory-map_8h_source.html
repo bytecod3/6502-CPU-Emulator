@@ -97,25 +97,26 @@ $(document).ready(function(){initNavTree('memory-map_8h_source.html',''); initRe
 <div class="title">memory-map.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="memory-map_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef MEMORY_H</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define MEMORY_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="memory-map_8h.html#a5ad3f75a4e38fd9bbed917c71ca4e9e0">    6</a></span>&#160;<span class="preprocessor">#define MEMORY_SIZE (1024 * 64) </span><span class="comment">// 64KB</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="structmem.html">    8</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structmem.html">mem</a> {</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="structmem.html#aa85f56867ca2674df486730d32cf3121">    9</a></span>&#160;    uint32_t <a class="code" href="structmem.html#aa85f56867ca2674df486730d32cf3121">size</a>;</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="memory-map_8h.html#aa728cca39a5aa6612d0fe05e113d4be0">   10</a></span>&#160;} <a class="code" href="memory-map_8h.html#aa728cca39a5aa6612d0fe05e113d4be0">Memory_type_t</a>;</div>
+<a href="memory-map_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef MEMORY_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define MEMORY_H</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;uint16_t* <a class="code" href="memory-map_8h.html#a44b3e051677640b32baac3ac287621ba">memory_initialize</a>(<a class="code" href="structmem.html">Memory_type_t</a>*);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="memory-map_8h.html#a5ad3f75a4e38fd9bbed917c71ca4e9e0">   14</a></span>&#160;<span class="preprocessor">#define MEMORY_SIZE (1024 * 64) </span><span class="comment">// 64KB</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structmem.html">   16</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structmem.html">mem</a> {</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structmem.html#aa85f56867ca2674df486730d32cf3121">   17</a></span>&#160;    uint32_t <a class="code" href="structmem.html#aa85f56867ca2674df486730d32cf3121">size</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="memory-map_8h.html#aa728cca39a5aa6612d0fe05e113d4be0">   18</a></span>&#160;} <a class="code" href="memory-map_8h.html#aa728cca39a5aa6612d0fe05e113d4be0">Memory_type_t</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;uint16_t* <a class="code" href="memory-map_8h.html#a44b3e051677640b32baac3ac287621ba">memory_initialize</a>(<a class="code" href="structmem.html">Memory_type_t</a>*);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="amemory-map_8h_html_a44b3e051677640b32baac3ac287621ba"><div class="ttname"><a href="memory-map_8h.html#a44b3e051677640b32baac3ac287621ba">memory_initialize</a></div><div class="ttdeci">uint16_t * memory_initialize(Memory_type_t *)</div><div class="ttdef"><b>Definition:</b> memory-map.c:22</div></div>
 <div class="ttc" id="amemory-map_8h_html_aa728cca39a5aa6612d0fe05e113d4be0"><div class="ttname"><a href="memory-map_8h.html#aa728cca39a5aa6612d0fe05e113d4be0">Memory_type_t</a></div><div class="ttdeci">struct mem Memory_type_t</div></div>
-<div class="ttc" id="astructmem_html"><div class="ttname"><a href="structmem.html">mem</a></div><div class="ttdef"><b>Definition:</b> memory-map.h:8</div></div>
-<div class="ttc" id="astructmem_html_aa85f56867ca2674df486730d32cf3121"><div class="ttname"><a href="structmem.html#aa85f56867ca2674df486730d32cf3121">mem::size</a></div><div class="ttdeci">uint32_t size</div><div class="ttdef"><b>Definition:</b> memory-map.h:9</div></div>
+<div class="ttc" id="astructmem_html"><div class="ttname"><a href="structmem.html">mem</a></div><div class="ttdef"><b>Definition:</b> memory-map.h:16</div></div>
+<div class="ttc" id="astructmem_html_aa85f56867ca2674df486730d32cf3121"><div class="ttname"><a href="structmem.html#aa85f56867ca2674df486730d32cf3121">mem::size</a></div><div class="ttdeci">uint32_t size</div><div class="ttdef"><b>Definition:</b> memory-map.h:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -1,6 +1,7 @@
 /**
  * @file main.c Main emulator file
- * @author Edwin Mwiti
+ * @author Edwin
+ * @email emwiti658@gmail.com
 */
 
 #include <stdio.h>

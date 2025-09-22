@@ -1,3 +1,11 @@
+/**
+ * @file memory-map.h
+ * @brief needed declarations for memory stuff
+ * @author Edwin
+ * @email emwiti658@gmail.com
+ */
+
+
 #ifndef MEMORY_H
 #define MEMORY_H
 
