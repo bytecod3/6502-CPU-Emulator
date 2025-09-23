@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['word_191',['word',['../types_8h.html#aacc262b7acb8ef2b1d38df8b855bc0f6',1,'types.h']]]
+  ['opcode_206',['Opcode',['../cpu_8h.html#ab148e48f12961aa67ccd28f19fbd96e4',1,'cpu.h']]]
 ];

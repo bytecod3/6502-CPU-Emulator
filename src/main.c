@@ -28,12 +28,22 @@ int main() {
     cpu_reset(p_6502);
     uint16_t* m = memory_initialize(p_mem);
 
+    printf("%d\n", p_6502->PC);
+
     // simple program
     m[0xFFFC] = 0xA9;
     m[0xFFFD] = 0x34;
+    m[0xFFFE] = 0x5A;
 
-    // end simple program
+    // fetch opcode and addressing mode
+    cpu_fetch_instruction(p_6502, p_mem, p_6502->PC);
 
+//    // end simple program
+
+
+    uint8_t hi_byte_index = (0xA9 & HI_BYTE_MASK) >> 4;
+    uint8_t lo_byte_index = (0xA9 & LO_BYTE_MASK);
+    printf("%d, %d\n", hi_byte_index, lo_byte_index);
 
 
     return 0;

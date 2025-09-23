@@ -97,7 +97,8 @@ $(document).ready(function(){initNavTree('memory-map_8h.html',''); initResizable
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">memory-map.h File Reference</div>  </div>
 </div><!--header-->
@@ -117,6 +118,7 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a5ad3f75a4e38fd9bbed917c71ca4e9e0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory-map_8h.html#a5ad3f75a4e38fd9bbed917c71ca4e9e0">MEMORY_SIZE</a>&#160;&#160;&#160;(1024 * 64)</td></tr>
+<tr class="memdesc:a5ad3f75a4e38fd9bbed917c71ca4e9e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">64KB in the MAX addressable memory  <a href="memory-map_8h.html#a5ad3f75a4e38fd9bbed917c71ca4e9e0">More...</a><br /></td></tr>
 <tr class="separator:a5ad3f75a4e38fd9bbed917c71ca4e9e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -128,6 +130,15 @@ Typedefs</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a44b3e051677640b32baac3ac287621ba"><td class="memItemLeft" align="right" valign="top">uint16_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory-map_8h.html#a44b3e051677640b32baac3ac287621ba">memory_initialize</a> (<a class="el" href="memory-map_8h.html#aa728cca39a5aa6612d0fe05e113d4be0">Memory_type_t</a> *)</td></tr>
 <tr class="separator:a44b3e051677640b32baac3ac287621ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a45e8fcd9c6f6a255b87bda0bdc682746"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory-map_8h.html#a45e8fcd9c6f6a255b87bda0bdc682746">HI_BYTE_MASK</a> = 0xF0</td></tr>
+<tr class="memdesc:a45e8fcd9c6f6a255b87bda0bdc682746"><td class="mdescLeft">&#160;</td><td class="mdescRight">for extracting the high byte  <a href="memory-map_8h.html#a45e8fcd9c6f6a255b87bda0bdc682746">More...</a><br /></td></tr>
+<tr class="separator:a45e8fcd9c6f6a255b87bda0bdc682746"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57019ef10e9bba389e8e2ccce4108f8c"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory-map_8h.html#a57019ef10e9bba389e8e2ccce4108f8c">LO_BYTE_MASK</a> = 0x0F</td></tr>
+<tr class="memdesc:a57019ef10e9bba389e8e2ccce4108f8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">for extracting the low byte  <a href="memory-map_8h.html#a57019ef10e9bba389e8e2ccce4108f8c">More...</a><br /></td></tr>
+<tr class="separator:a57019ef10e9bba389e8e2ccce4108f8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>needed declarations for memory stuff </p>
@@ -144,6 +155,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>64KB in the MAX addressable memory </p>
 
 </div>
 </div>
@@ -185,6 +198,39 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>pointer to the memory area </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a45e8fcd9c6f6a255b87bda0bdc682746"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45e8fcd9c6f6a255b87bda0bdc682746">&#9670;&nbsp;</a></span>HI_BYTE_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t HI_BYTE_MASK = 0xF0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>for extracting the high byte </p>
+
+</div>
+</div>
+<a id="a57019ef10e9bba389e8e2ccce4108f8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57019ef10e9bba389e8e2ccce4108f8c">&#9670;&nbsp;</a></span>LO_BYTE_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LO_BYTE_MASK = 0x0F</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>for extracting the low byte </p>
 
 </div>
 </div>

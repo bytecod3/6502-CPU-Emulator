@@ -124,9 +124,9 @@ typedef enum OPCODES {
     TXS,    ///< transfer index X to stack pointer
     TYA,     ///< transfer index Y to accumulator
     WAI,
-    INVLD,      ///< invalid operation
+    INVLD,      ///< invalid opcode
 
-    BBR0,
+    BBR0, ///< newer opcodes
     BBR1,
     BBR2,
     BBR3,
@@ -164,11 +164,12 @@ typedef enum OPCODES {
  * @brief Instruction
  * An instruction is made up of the opcode and the
  */
-struct instruction {
+typedef struct instruction {
     Opcode opcode;
     Addressing_mode addr_mode;
+} Instruction;
 
-};
+Instruction instr;                      // to store the fetched instruction
 
 /**
  * @brief addressing modes table
@@ -233,10 +234,10 @@ void cpu_reset(CPU_type_t*);
 
 /**
  * fetch instruction from memory at the address pointed to by PC
- * @param m
- * @param address
+ * @param m memory
+ * @param address address of the instruction in memory
  */
-void cpu_fetch_instruction(CPU_type_t*, uint16_t* m,  uint16_t* address);
+Instruction* cpu_fetch_instruction(CPU_type_t*, uint16_t* memory,  uint16_t address);
 
 /**
  * @brief decodes instruction fetched from memory

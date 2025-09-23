@@ -11,7 +11,9 @@
 
 #include <stdint.h>
 
-#define MEMORY_SIZE (1024 * 64) // 64KB
+#define MEMORY_SIZE (1024 * 64)             ///< 64KB in the MAX addressable memory
+uint8_t HI_BYTE_MASK = 0xF0;                ///< for extracting the high byte
+uint8_t LO_BYTE_MASK = 0x0F;                ///< for extracting the low byte
 
 typedef struct mem {
     uint32_t size;

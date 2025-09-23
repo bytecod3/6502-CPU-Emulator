@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['opcode_90',['opcode',['../structinstruction.html#a65fe1b5424d7a22b6b42e9392a2a0aa2',1,'instruction']]],
-  ['opcode_91',['Opcode',['../cpu_8h.html#ab148e48f12961aa67ccd28f19fbd96e4',1,'cpu.h']]],
-  ['opcodes_92',['OPCODES',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83e',1,'cpu.h']]],
-  ['opcodes_93',['opcodes',['../cpu_8h.html#a0b13ee645a96a164252207d4865c967c',1,'cpu.h']]],
-  ['ora_94',['ORA',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83eab43dd2c95c69001cc572b32c2913e905',1,'cpu.h']]]
+  ['n_5fmask_94',['N_MASK',['../cpu_8h.html#a692bdeda705dfd98d9c4899e604a77c8',1,'cpu.h']]],
+  ['nop_95',['NOP',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83eaf811bef354b292ff0713c50d7652c026',1,'cpu.h']]]
 ];

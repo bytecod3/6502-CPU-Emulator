@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pc_181',['PC',['../structCPU__type__t.html#ad50a4d524eff6fdb589c86d9528e609f',1,'CPU_type_t']]]
+  ['instr_192',['instr',['../cpu_8h.html#a848a5a6387e2ecda0c12da98ba53d63c',1,'cpu.h']]]
 ];

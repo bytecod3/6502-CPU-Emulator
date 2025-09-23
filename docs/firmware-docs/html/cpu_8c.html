@@ -101,24 +101,25 @@ $(document).ready(function(){initNavTree('cpu_8c.html',''); initResizable(); });
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="cpu_8h_source.html">cpu.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="memory-map_8h_source.html">memory-map.h</a>&quot;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a6fe715045595bf2aaee8cd60d4dfba45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpu_8c.html#a6fe715045595bf2aaee8cd60d4dfba45">cpu_reset</a> (<a class="el" href="structCPU__type__t.html">CPU_type_t</a> *cpu)</td></tr>
 <tr class="separator:a6fe715045595bf2aaee8cd60d4dfba45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adba37c78b5e01716a2a2387ec8766f36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpu_8c.html#adba37c78b5e01716a2a2387ec8766f36">cpu_fetch_instruction</a> (<a class="el" href="structCPU__type__t.html">CPU_type_t</a> *cpu, uint16_t *memory, uint16_t *address)</td></tr>
-<tr class="separator:adba37c78b5e01716a2a2387ec8766f36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c2fa7a4b098d39643a854d8409e6e43"><td class="memItemLeft" align="right" valign="top"><a class="el" href="cpu_8h.html#ab0aae7c5208d468865675be3dd61d5a1">Instruction</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpu_8c.html#a2c2fa7a4b098d39643a854d8409e6e43">cpu_fetch_instruction</a> (<a class="el" href="structCPU__type__t.html">CPU_type_t</a> *cpu, uint16_t *memory, uint16_t address)</td></tr>
+<tr class="separator:a2c2fa7a4b098d39643a854d8409e6e43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="adba37c78b5e01716a2a2387ec8766f36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adba37c78b5e01716a2a2387ec8766f36">&#9670;&nbsp;</a></span>cpu_fetch_instruction()</h2>
+<a id="a2c2fa7a4b098d39643a854d8409e6e43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c2fa7a4b098d39643a854d8409e6e43">&#9670;&nbsp;</a></span>cpu_fetch_instruction()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void cpu_fetch_instruction </td>
+          <td class="memname"><a class="el" href="cpu_8h.html#ab0aae7c5208d468865675be3dd61d5a1">Instruction</a>* cpu_fetch_instruction </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structCPU__type__t.html">CPU_type_t</a> *&#160;</td>
           <td class="paramname"><em>cpu</em>, </td>
@@ -132,7 +133,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint16_t *&#160;</td>
+          <td class="paramtype">uint16_t&#160;</td>
           <td class="paramname"><em>address</em>&#160;</td>
         </tr>
         <tr>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['x_185',['X',['../structCPU__type__t.html#aa420e0bf6457ac9698e902d346308556',1,'CPU_type_t']]]
+  ['opcode_194',['opcode',['../structinstruction.html#a65fe1b5424d7a22b6b42e9392a2a0aa2',1,'instruction']]],
+  ['opcodes_195',['opcodes',['../cpu_8h.html#a0b13ee645a96a164252207d4865c967c',1,'cpu.h']]]
 ];

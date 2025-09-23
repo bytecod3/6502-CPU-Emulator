@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['opcode_190',['Opcode',['../cpu_8h.html#ab148e48f12961aa67ccd28f19fbd96e4',1,'cpu.h']]]
+  ['memory_5ftype_5ft_205',['Memory_type_t',['../memory-map_8h.html#aa728cca39a5aa6612d0fe05e113d4be0',1,'memory-map.h']]]
 ];

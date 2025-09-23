@@ -1,5 +1,6 @@
 #include "cpu.h"
 #include "memory-map.h"
+#include <stdio.h>
 #include <stdint.h>
 
 /**
@@ -32,8 +33,24 @@ void cpu_reset(CPU_type_t* cpu) {
  * effectively, increment the PC so it points to the next address
  * decrement the number of CPU cycles needed to fetch this instruction
  */
-void cpu_fetch_instruction(CPU_type_t* cpu, uint16_t* memory,  uint16_t* address) {
-    uint8_t opcode = memory[cpu->PC];
-    cpu->PC++;
-    cpu->cycles--; // check cycles
+Instruction* cpu_fetch_instruction(CPU_type_t* cpu, uint16_t* memory,  uint16_t address) {
+    if( (cpu != NULL) && (memory != NULL) ) {
+        uint8_t data = memory[address];                                                // todo-> bound check
+        uint8_t hi_byte_index = (data & HI_BYTE_MASK) >> 4;
+        uint8_t lo_byte_index = (data & LO_BYTE_MASK);
+
+        uint8_t opcode = opcodes[hi_byte_index][lo_byte_index];                       // get the opcode
+        uint8_t addr_mode = addressing_modes[hi_byte_index][lo_byte_index];            // get the addressing mode
+
+        Instruction* p_instr = & instr;
+        p_instr->opcode = opcode;
+        p_instr->addr_mode = addr_mode;
+
+        cpu->PC++;
+        cpu->cycles--; // check cycles
+
+        return p_instr;
+    } else {
+         return NULL;
+    }
 }

@@ -1,15 +1,13 @@
 var searchData=
 [
-  ['rmb1_105',['RMB1',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83ea385e47c990f717e851cfcc0d738e79f6',1,'cpu.h']]],
-  ['rmb2_106',['RMB2',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83eaca0cdce48311b87a685d99e71564246d',1,'cpu.h']]],
-  ['rmb3_107',['RMB3',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83eabf28022736a461e786fcd83317294f8f',1,'cpu.h']]],
-  ['rmb4_108',['RMB4',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83ea649d47753d1da2862436897d15785ab7',1,'cpu.h']]],
-  ['rmb5_109',['RMB5',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83ea4de3a87d54e453107bad895a2cb0cad8',1,'cpu.h']]],
-  ['rmb6_110',['RMB6',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83eaeab4fbc619d3454d4b5d913569ad071d',1,'cpu.h']]],
-  ['rmb7_111',['RMB7',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83eaf0806a5c5d5efafa1713804140ac4695',1,'cpu.h']]],
-  ['rmbo_112',['RMBO',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83ea22ffa31e6a66068066e7ac020ef308b6',1,'cpu.h']]],
-  ['rol_113',['ROL',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83ea38d0bc977289569e38f3a751f23b9d09',1,'cpu.h']]],
-  ['ror_114',['ROR',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83ea7b369e7350ac1a6585413ed60a0d6e10',1,'cpu.h']]],
-  ['rti_115',['RTI',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83ea06d724c2825230cf5893f6985bf6f4bd',1,'cpu.h']]],
-  ['rts_116',['RTS',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83eae58caa68ff8b6e4838007985c7e3ae66',1,'cpu.h']]]
+  ['pc_101',['PC',['../structCPU__type__t.html#ad50a4d524eff6fdb589c86d9528e609f',1,'CPU_type_t']]],
+  ['pc_5frel_102',['PC_REL',['../cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a92f6d0cd5dab7116b6b022d54c664256',1,'cpu.h']]],
+  ['pha_103',['PHA',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83ead9817b654c01277cbe8ae708457e94a2',1,'cpu.h']]],
+  ['php_104',['PHP',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83ea66a12917de74d2aa60aedee9107f7eca',1,'cpu.h']]],
+  ['phx_105',['PHX',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83ea1f9b0d8251b6edaffde6f84fd2cec697',1,'cpu.h']]],
+  ['phy_106',['PHY',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83ea447898b405796e8408d14997383cd7f0',1,'cpu.h']]],
+  ['pla_107',['PLA',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83eab7dc144b9f06dbcf57002f3dcdd6a04e',1,'cpu.h']]],
+  ['plp_108',['PLP',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83ea39cfa0b4108a78db97edfb547ad3af91',1,'cpu.h']]],
+  ['plx_109',['PLX',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83ea08e944ee94ad4148570fad04ff794dd0',1,'cpu.h']]],
+  ['ply_110',['PLY',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83eac1788b8222e23070e0e60e4195eae676',1,'cpu.h']]]
 ];

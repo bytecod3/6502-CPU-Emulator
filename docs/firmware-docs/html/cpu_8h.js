@@ -11,6 +11,7 @@ var cpu_8h =
     [ "V_MASK", "cpu_8h.html#a3964a8e86997d1704108bb308e5a644f", null ],
     [ "Z_MASK", "cpu_8h.html#ac0164c9c1fa7eb84f4d55237e2124b2e", null ],
     [ "Addressing_mode", "cpu_8h.html#a474c0243a95067a8f49fbddf254228e8", null ],
+    [ "Instruction", "cpu_8h.html#ab0aae7c5208d468865675be3dd61d5a1", null ],
     [ "Opcode", "cpu_8h.html#ab148e48f12961aa67ccd28f19fbd96e4", null ],
     [ "addressing_modes", "cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4", [
       [ "ABS_A", "cpu_8h.html#afe4dfc1a95360a4b9e28e68b5ce7c3a4a27e82afb3be95af431498db062862a3a", null ],
@@ -134,8 +135,9 @@ var cpu_8h =
       [ "SMB7", "cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83eae7867c4c3ac808417d1b4e8f99263348", null ]
     ] ],
     [ "cpu_decode_instruction", "cpu_8h.html#acd84d84fd0576b507b353a26cab80224", null ],
-    [ "cpu_fetch_instruction", "cpu_8h.html#a362d694aed499a1e8c23ab6d55bcaa2f", null ],
+    [ "cpu_fetch_instruction", "cpu_8h.html#abad4541a71c63c099f288a2ed7d69761", null ],
     [ "cpu_reset", "cpu_8h.html#a0041f5adac5e09a3a4b625384bda6dc5", null ],
     [ "addressing_modes", "cpu_8h.html#a3010c4a9b4200e668457ba5b15134174", null ],
+    [ "instr", "cpu_8h.html#a848a5a6387e2ecda0c12da98ba53d63c", null ],
     [ "opcodes", "cpu_8h.html#a0b13ee645a96a164252207d4865c967c", null ]
 ];

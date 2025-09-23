@@ -9,11 +9,13 @@ var searchData=
   ['config_2eh_48',['config.h',['../config_8h.html',1,'']]],
   ['cpu_2ec_49',['cpu.c',['../cpu_8c.html',1,'']]],
   ['cpu_2eh_50',['cpu.h',['../cpu_8h.html',1,'']]],
-  ['cpu_5fdecode_5finstruction_51',['cpu_decode_instruction',['../cpu_8h.html#acd84d84fd0576b507b353a26cab80224',1,'cpu.h']]],
-  ['cpu_5ffetch_5finstruction_52',['cpu_fetch_instruction',['../cpu_8h.html#a362d694aed499a1e8c23ab6d55bcaa2f',1,'cpu_fetch_instruction(CPU_type_t *, uint16_t *m, uint16_t *address):&#160;cpu.c'],['../cpu_8c.html#adba37c78b5e01716a2a2387ec8766f36',1,'cpu_fetch_instruction(CPU_type_t *cpu, uint16_t *memory, uint16_t *address):&#160;cpu.c']]],
-  ['cpu_5freset_53',['cpu_reset',['../cpu_8h.html#a0041f5adac5e09a3a4b625384bda6dc5',1,'cpu_reset(CPU_type_t *):&#160;cpu.c'],['../cpu_8c.html#a6fe715045595bf2aaee8cd60d4dfba45',1,'cpu_reset(CPU_type_t *cpu):&#160;cpu.c']]],
-  ['cpu_5ftype_5ft_54',['CPU_type_t',['../structCPU__type__t.html',1,'']]],
-  ['cpx_55',['CPX',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83eaca527afa084e2de36ab80b16b48f9797',1,'cpu.h']]],
-  ['cpy_56',['CPY',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83eae050ad0779cedc4fbcffa0f8a2127068',1,'cpu.h']]],
-  ['cycles_57',['cycles',['../structCPU__type__t.html#a27cd19838d15f3eed0f459025b2a8589',1,'CPU_type_t']]]
+  ['cpu_5faddressing_5fmode_5fto_5fstr_51',['cpu_addressing_mode_to_str',['../utils_8h.html#a04221ab00686e891e1d62d8d178b0069',1,'cpu_addressing_mode_to_str(Addressing_mode addr_mode):&#160;utils.c'],['../utils_8c.html#a04221ab00686e891e1d62d8d178b0069',1,'cpu_addressing_mode_to_str(Addressing_mode addr_mode):&#160;utils.c']]],
+  ['cpu_5fdecode_5finstruction_52',['cpu_decode_instruction',['../cpu_8h.html#acd84d84fd0576b507b353a26cab80224',1,'cpu.h']]],
+  ['cpu_5ffetch_5finstruction_53',['cpu_fetch_instruction',['../cpu_8h.html#abad4541a71c63c099f288a2ed7d69761',1,'cpu_fetch_instruction(CPU_type_t *, uint16_t *memory, uint16_t address):&#160;cpu.c'],['../cpu_8c.html#a2c2fa7a4b098d39643a854d8409e6e43',1,'cpu_fetch_instruction(CPU_type_t *cpu, uint16_t *memory, uint16_t address):&#160;cpu.c']]],
+  ['cpu_5fopcode_5fto_5fstr_54',['cpu_opcode_to_str',['../utils_8h.html#a2aa0835c7c9210de5fd8e46011ec1ec0',1,'cpu_opcode_to_str(Opcode code):&#160;utils.c'],['../utils_8c.html#a2aa0835c7c9210de5fd8e46011ec1ec0',1,'cpu_opcode_to_str(Opcode code):&#160;utils.c']]],
+  ['cpu_5freset_55',['cpu_reset',['../cpu_8h.html#a0041f5adac5e09a3a4b625384bda6dc5',1,'cpu_reset(CPU_type_t *):&#160;cpu.c'],['../cpu_8c.html#a6fe715045595bf2aaee8cd60d4dfba45',1,'cpu_reset(CPU_type_t *cpu):&#160;cpu.c']]],
+  ['cpu_5ftype_5ft_56',['CPU_type_t',['../structCPU__type__t.html',1,'']]],
+  ['cpx_57',['CPX',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83eaca527afa084e2de36ab80b16b48f9797',1,'cpu.h']]],
+  ['cpy_58',['CPY',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83eae050ad0779cedc4fbcffa0f8a2127068',1,'cpu.h']]],
+  ['cycles_59',['cycles',['../structCPU__type__t.html#a27cd19838d15f3eed0f459025b2a8589',1,'CPU_type_t']]]
 ];

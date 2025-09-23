@@ -1,5 +1,11 @@
 var searchData=
 [
-  ['n_5fmask_88',['N_MASK',['../cpu_8h.html#a692bdeda705dfd98d9c4899e604a77c8',1,'cpu.h']]],
-  ['nop_89',['NOP',['../cpu_8h.html#a43695c6fa5f17092f94ec826d4ffb83eaf811bef354b292ff0713c50d7652c026',1,'cpu.h']]]
+  ['main_86',['main',['../main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.c']]],
+  ['main_2ec_87',['main.c',['../main_8c.html',1,'']]],
+  ['mem_88',['mem',['../structmem.html',1,'']]],
+  ['memory_2dmap_2ec_89',['memory-map.c',['../memory-map_8c.html',1,'']]],
+  ['memory_2dmap_2eh_90',['memory-map.h',['../memory-map_8h.html',1,'']]],
+  ['memory_5finitialize_91',['memory_initialize',['../memory-map_8h.html#a44b3e051677640b32baac3ac287621ba',1,'memory_initialize(Memory_type_t *):&#160;memory-map.c'],['../memory-map_8c.html#a4902ae62aaa83a5e640532064e408e48',1,'memory_initialize(Memory_type_t *m):&#160;memory-map.c']]],
+  ['memory_5fsize_92',['MEMORY_SIZE',['../memory-map_8h.html#a5ad3f75a4e38fd9bbed917c71ca4e9e0',1,'memory-map.h']]],
+  ['memory_5ftype_5ft_93',['Memory_type_t',['../memory-map_8h.html#aa728cca39a5aa6612d0fe05e113d4be0',1,'memory-map.h']]]
 ];
