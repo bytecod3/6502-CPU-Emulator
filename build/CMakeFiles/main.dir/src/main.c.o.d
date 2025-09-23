@@ -32,4 +32,6 @@ CMakeFiles/main.dir/src/main.c.o: \
  /home/eduh/projects/6502-CPU-Emulator/include/memory-map.h \
  /home/eduh/projects/6502-CPU-Emulator/include/cpu.h \
  /home/eduh/projects/6502-CPU-Emulator/include/types.h \
- /home/eduh/projects/6502-CPU-Emulator/include/memory-map.h
+ /home/eduh/projects/6502-CPU-Emulator/include/memory-map.h \
+ /home/eduh/projects/6502-CPU-Emulator/include/utils.h \
+ /home/eduh/projects/6502-CPU-Emulator/include/cpu.h

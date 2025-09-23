@@ -14,6 +14,11 @@
 #include <string.h>
 #include "memory-map.h"
 
+
+uint8_t HI_BYTE_MASK = 0xF0;                ///< for extracting the high byte
+uint8_t LO_BYTE_MASK = 0x0F;                ///< for extracting the low byte
+
+
 /**
  * create a memory area and initialize it to 0
  * @param m memory struct

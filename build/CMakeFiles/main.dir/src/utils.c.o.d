@@ -1,6 +1,7 @@
-CMakeFiles/main.dir/src/cpu.c.o: \
- /home/eduh/projects/6502-CPU-Emulator/src/cpu.c \
+CMakeFiles/main.dir/src/utils.c.o: \
+ /home/eduh/projects/6502-CPU-Emulator/src/utils.c \
  /usr/include/stdc-predef.h \
+ /home/eduh/projects/6502-CPU-Emulator/include/utils.h \
  /home/eduh/projects/6502-CPU-Emulator/include/cpu.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
@@ -18,16 +19,4 @@ CMakeFiles/main.dir/src/cpu.c.o: \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /home/eduh/projects/6502-CPU-Emulator/include/types.h \
- /home/eduh/projects/6502-CPU-Emulator/include/memory-map.h \
- /home/eduh/projects/6502-CPU-Emulator/include/memory-map.h \
- /usr/include/stdio.h /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h
+ /home/eduh/projects/6502-CPU-Emulator/include/memory-map.h

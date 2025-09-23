@@ -10,13 +10,14 @@
 #include "types.h"
 #include "memory-map.h"
 #include "cpu.h"
+#include "utils.h"
 
 int main() {
     CPU_type_t cpu_6502; // cpu instance
     Memory_type_t c_mem; // some memory
 
-    CPU_type_t* p_6502 = &cpu_6502;
-    Memory_type_t* p_mem = & c_mem;
+    CPU_type_t* cpu_6502_ptr = &cpu_6502;
+    Memory_type_t* mem_ptr = &c_mem;
 
     /*
      * initialize
@@ -25,25 +26,24 @@ int main() {
      * CPU reset but this is not a standard implementation since memory is outside the
      * CPU
      */
-    cpu_reset(p_6502);
-    uint16_t* m = memory_initialize(p_mem);
+    cpu_reset(cpu_6502_ptr);
+    uint16_t* m_ptr = memory_initialize(mem_ptr);
 
-    printf("%d\n", p_6502->PC);
+    printf("%d\n", cpu_6502_ptr->PC);
 
     // simple program
-    m[0xFFFC] = 0xA9;
-    m[0xFFFD] = 0x34;
-    m[0xFFFE] = 0x5A;
+    m_ptr[0xFFFC] = 0xA9;
+    m_ptr[0xFFFD] = 0x34;
+    m_ptr[0xFFFE] = 0x5A;
+    // end simple program
 
     // fetch opcode and addressing mode
-    cpu_fetch_instruction(p_6502, p_mem, p_6502->PC);
+    Instruction i;
+    Instruction* instr_ptr = &i;
+    cpu_fetch_instruction(cpu_6502_ptr, m_ptr, cpu_6502_ptr->PC, instr_ptr);
 
-//    // end simple program
-
-
-    uint8_t hi_byte_index = (0xA9 & HI_BYTE_MASK) >> 4;
-    uint8_t lo_byte_index = (0xA9 & LO_BYTE_MASK);
-    printf("%d, %d\n", hi_byte_index, lo_byte_index);
+    puts("Fetched instruction from memory\n");
+    printf("%s, %s\n", cpu_opcode_to_str(instr_ptr->opcode), cpu_addressing_mode_to_str(instr_ptr->addr_mode));
 
 
     return 0;

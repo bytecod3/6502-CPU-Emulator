@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/eduh/projects/6502-CPU-Emulator/src/cpu.c" "CMakeFiles/main.dir/src/cpu.c.o" "gcc" "CMakeFiles/main.dir/src/cpu.c.o.d"
   "/home/eduh/projects/6502-CPU-Emulator/src/main.c" "CMakeFiles/main.dir/src/main.c.o" "gcc" "CMakeFiles/main.dir/src/main.c.o.d"
   "/home/eduh/projects/6502-CPU-Emulator/src/memory-map.c" "CMakeFiles/main.dir/src/memory-map.c.o" "gcc" "CMakeFiles/main.dir/src/memory-map.c.o.d"
+  "/home/eduh/projects/6502-CPU-Emulator/src/utils.c" "CMakeFiles/main.dir/src/utils.c.o" "gcc" "CMakeFiles/main.dir/src/utils.c.o.d"
   )
 
 # Targets to which this target links.

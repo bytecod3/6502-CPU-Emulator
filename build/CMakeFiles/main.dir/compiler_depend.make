@@ -23,7 +23,19 @@ CMakeFiles/main.dir/src/cpu.c.o: ../src/cpu.c \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
   ../include/types.h \
   ../include/memory-map.h \
-  ../include/memory-map.h
+  ../include/memory-map.h \
+  /usr/include/stdio.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h
 
 CMakeFiles/main.dir/src/main.c.o: ../src/main.c \
   /usr/include/stdc-predef.h \
@@ -61,7 +73,9 @@ CMakeFiles/main.dir/src/main.c.o: ../src/main.c \
   ../include/memory-map.h \
   ../include/cpu.h \
   ../include/types.h \
-  ../include/memory-map.h
+  ../include/memory-map.h \
+  ../include/utils.h \
+  ../include/cpu.h
 
 CMakeFiles/main.dir/src/memory-map.c.o: ../src/memory-map.c \
   /usr/include/stdc-predef.h \
@@ -118,6 +132,32 @@ CMakeFiles/main.dir/src/memory-map.c.o: ../src/memory-map.c \
   /usr/include/strings.h \
   ../include/memory-map.h
 
+CMakeFiles/main.dir/src/utils.c.o: ../src/utils.c \
+  /usr/include/stdc-predef.h \
+  ../include/utils.h \
+  ../include/cpu.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/features.h \
+  /usr/include/features-time64.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  ../include/types.h \
+  ../include/memory-map.h
+
+
+../src/utils.c:
 
 /usr/include/strings.h:
 
@@ -163,11 +203,15 @@ CMakeFiles/main.dir/src/memory-map.c.o: ../src/memory-map.c \
 
 ../src/cpu.c:
 
-../src/main.c:
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
+/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
@@ -184,6 +228,8 @@ CMakeFiles/main.dir/src/memory-map.c.o: ../src/memory-map.c \
 /usr/include/features.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
+
+../include/utils.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
@@ -203,25 +249,29 @@ CMakeFiles/main.dir/src/memory-map.c.o: ../src/memory-map.c \
 
 /usr/include/features-time64.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
-
-/usr/include/x86_64-linux-gnu/sys/cdefs.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
-
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+
+../src/main.c:
+
+/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
+
+../include/types.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
 /usr/include/endian.h:
 
@@ -246,11 +296,3 @@ CMakeFiles/main.dir/src/memory-map.c.o: ../src/memory-map.c \
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
-
-../include/types.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:

@@ -5,8 +5,6 @@
 */
 
 #include "utils.h"
-#include "cpu.h"
-#include "memory-map.h"
 
 /**
  * @brief This function returns the opcode as a string
@@ -225,7 +223,6 @@ const char* cpu_opcode_to_str(Opcode code) {
  */
 const char* cpu_addressing_mode_to_str(Addressing_mode addr_mode) {
     switch (addr_mode) {
-
         case ABS_A:
             return "Absolute a";                             /*!< a,  absolute */
         case ABS_INDX_IND:

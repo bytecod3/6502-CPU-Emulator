@@ -33,7 +33,7 @@ void cpu_reset(CPU_type_t* cpu) {
  * effectively, increment the PC so it points to the next address
  * decrement the number of CPU cycles needed to fetch this instruction
  */
-Instruction* cpu_fetch_instruction(CPU_type_t* cpu, uint16_t* memory,  uint16_t address) {
+Instruction* cpu_fetch_instruction(CPU_type_t* cpu, uint16_t* memory,  uint16_t address, Instruction* ins) {
     if( (cpu != NULL) && (memory != NULL) ) {
         uint8_t data = memory[address];                                                // todo-> bound check
         uint8_t hi_byte_index = (data & HI_BYTE_MASK) >> 4;
@@ -42,14 +42,13 @@ Instruction* cpu_fetch_instruction(CPU_type_t* cpu, uint16_t* memory,  uint16_t 
         uint8_t opcode = opcodes[hi_byte_index][lo_byte_index];                       // get the opcode
         uint8_t addr_mode = addressing_modes[hi_byte_index][lo_byte_index];            // get the addressing mode
 
-        Instruction* p_instr = & instr;
-        p_instr->opcode = opcode;
-        p_instr->addr_mode = addr_mode;
+        ins->opcode = opcode;
+        ins->addr_mode = addr_mode;
 
         cpu->PC++;
         cpu->cycles--; // check cycles
 
-        return p_instr;
+        return ins;
     } else {
          return NULL;
     }

@@ -5,6 +5,9 @@
  * @email emwiti658@gmail.com
  */
 
+#ifndef CPU_H
+#define CPU_H
+
 #include <stdint.h>
 #include "types.h"
 #include "memory-map.h"
@@ -169,7 +172,7 @@ typedef struct instruction {
     Addressing_mode addr_mode;
 } Instruction;
 
-Instruction instr;                      // to store the fetched instruction
+//extern Instruction instr;                      // to store the fetched instruction
 
 /**
  * @brief addressing modes table
@@ -237,10 +240,12 @@ void cpu_reset(CPU_type_t*);
  * @param m memory
  * @param address address of the instruction in memory
  */
-Instruction* cpu_fetch_instruction(CPU_type_t*, uint16_t* memory,  uint16_t address);
+Instruction* cpu_fetch_instruction(CPU_type_t*, uint16_t* memory,  uint16_t address, Instruction*);
 
 /**
  * @brief decodes instruction fetched from memory
  */
 void cpu_decode_instruction();
 
+
+#endif
